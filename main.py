@@ -43,7 +43,7 @@ def download_file(file_url, file_out):
     file = open(file_out, 'wb')
 
     file.write(response.read())
-    
+
     file.close()
 
     print("complete")
