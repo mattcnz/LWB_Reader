@@ -105,10 +105,10 @@ if __name__ == "__main__":
         #We now have a list of dictionarys called issueArray, where each entry represents an issue of the LWB
         #We can iterate over issueArray, and for each entry we can download it from the provided path and add it to the LWB Issues Directory
 
-        ## CHANGE issueArray[0:3] to issueArray if you want to download all of them.
-        ## whole line would be: for entry in issueArray:
+        ## CHANGE "for entry in issueArray:" to "for entry in issueArray[0:n]:" if you want to download n issues.
+        
 
-    for entry in issueArray[1:3]:
+    for entry in issueArray:
 
         downloadPath = "https://lwb.co.nz/" + entry['path']
         download_file(downloadPath, str(entry['number'])+ '.pdf')
